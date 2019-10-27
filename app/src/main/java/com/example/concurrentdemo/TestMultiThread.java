@@ -13,6 +13,8 @@ public class TestMultiThread {
 
 //        testOneCase();
         testTwoCase();
+//        String s = String.valueOf(null);
+//        System.out.println("string = "+s);
     }
 
     private static void testTwoCase() {
@@ -51,7 +53,6 @@ public class TestMultiThread {
                         System.out.println("current: T2 = " + i);
                         condition1.signal();
                         condition2.await();
-
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     } finally {
